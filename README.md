@@ -1,6 +1,6 @@
-# ArquivosDoc - API de Recebimento de Notas Fiscais Eletrônicas (NFe)
+# ArquivosGED - API de Recebimento de Notas Fiscais Eletrônicas (NFe)
 
-A **API REST da ArquivosDoc** permite que sistemas ERP enviem **arquivos XML de NFe** diretamente para a plataforma de **GED (Gerenciamento Eletrônico de Documentos)**. A comunicação é segura, padronizada e compatível com múltiplas linguagens de programação.
+A **API REST da ArquivosGED** permite que sistemas ERP enviem **arquivos XML de NFe** diretamente para a plataforma de **GED (Gerenciamento Eletrônico de Documentos)**. A comunicação é segura, padronizada e compatível com múltiplas linguagens de programação.
 
 > Esta documentação refere-se exclusivamente à **integração de envio**. O processamento posterior (geração de PDF, assinatura digital, indexação e vinculação documental) ocorre internamente na ArquivosDoc após validação do XML.
 
@@ -30,7 +30,7 @@ Authorization: Bearer SEU_TOKEN
 
 ## 📥 Payload da Requisição
 
-O corpo da requisição deve conter **exclusivamente o conteúdo XML da NFe** (modelo 55).
+O corpo da requisição deve conter **exclusivamente o conteúdo XML da NFe**.
 
 ### Exemplo:
 
@@ -187,12 +187,6 @@ puts response.body
 }
 ```
 
-## 📌 Considerações
-
-- A API **não aceita arquivos ZIP, RAR ou outros formatos**.
-- O sistema realiza **validação de schema XSD** internamente.
-- Apenas arquivos do **modelo 55 (NFe)** são aceitos nesta versão da API.
-- O protocolo retornado pode ser usado para rastreio futuro da nota.
 
 ## 📞 Suporte Técnico
 
@@ -202,7 +196,7 @@ Entre em contato com nossa equipe para:
 - Suporte técnico em homologação
 - Reportar comportamentos inesperados
 
-📧 suporte@arquivosdoc.com.br  
+📧 tecnologia@arquivosdoc.com.br  
 🌐 https://www.arquivosdoc.com.br
 
 ## ✅ Compatibilidade
